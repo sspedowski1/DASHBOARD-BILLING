@@ -7,8 +7,8 @@ from datetime import datetime
 
 # ---- PATH SETUP ----
 folder_path = r"C:\Users\ma\Documents\DASHBOARD-BILLING"
-source_pdf_folder = r"C:\Users\ma\Documents\DASHBOARD-BILLING\ERA COPIES 2025"
-react_data_folder = r"C:\Users\ma\primary-care-dashboard\public\data"
+source_pdf_folder = os.path.join(folder_path, "ERA COPIES 2025")
+react_data_folder = os.path.join(folder_path, "careops-dashboard", "public", "data")
 output_file = os.path.join(folder_path, "remittance_summary.xlsx")
 processed_log = os.path.join(folder_path, "processed_files.txt")
 
