@@ -1,0 +1,74 @@
+[
+    {
+        "Month": "Jan",
+        "billed": 38207.96,
+        "paid": 11661.11,
+        "denied": 59
+    },
+    {
+        "Month": "Feb",
+        "billed": 84763.88,
+        "paid": 36764.54,
+        "denied": 77
+    },
+    {
+        "Month": "Mar",
+        "billed": 128302.6,
+        "paid": 56492.22,
+        "denied": 110
+    },
+    {
+        "Month": "Apr",
+        "billed": 115090.24,
+        "paid": 45347.72,
+        "denied": 147
+    },
+    {
+        "Month": "May",
+        "billed": 73927.91,
+        "paid": 29719.899999999998,
+        "denied": 112
+    },
+    {
+        "Month": "Jun",
+        "billed": 42777.08,
+        "paid": 17439.41,
+        "denied": 68
+    },
+    {
+        "Month": "Jul",
+        "billed": 47882.31,
+        "paid": 19897.77,
+        "denied": 54
+    },
+    {
+        "Month": "Aug",
+        "billed": 5382.64,
+        "paid": 301.12,
+        "denied": 14
+    },
+    {
+        "Month": "Sep",
+        "billed": 5939.24,
+        "paid": 1846.68,
+        "denied": 6
+    },
+    {
+        "Month": "Oct",
+        "billed": 10461.4,
+        "paid": 2455.15,
+        "denied": 20
+    },
+    {
+        "Month": "Nov",
+        "billed": 14522.36,
+        "paid": 3663.87,
+        "denied": 37
+    },
+    {
+        "Month": "Dec",
+        "billed": 22518.68,
+        "paid": 6046.32,
+        "denied": 50
+    }
+]
