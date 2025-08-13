@@ -166,6 +166,27 @@ with open(os.path.join(react_data_folder, "cptPaymentData.json"), "w") as f:
     json.dump(cpt_data, f, indent=4)
 with open(os.path.join(react_data_folder, "monthlyPerformance.json"), "w") as f:
     json.dump(monthly_data, f, indent=4)
+from datetime import datetime, timezone
+
+worklist_rows = []
+denial_cols = [col for col in df_combined.columns if re.match(r"[A-Z]{2}-\d{2,3}", col)]
+today = datetime.now(timezone.utc).date()
+
+for _, row in df_combined.iterrows():
+    if float(row.get("PROV PD", 0) or 0) == 0:
+        reason = next((c for c in denial_cols if float(row.get(c, 0) or 0) != 0), None)
+        serv_date = row.get("Parsed_Date")
+        days = (today - serv_date.date()).days if pd.notna(serv_date) else 0
+        worklist_rows.append({
+            "id": f"{row.get('INSURANCE','UNK')}-{str(row.get('File','')).split('.')[0]}",
+            "reason": reason or "Unspecified denial",
+            "claim": row.get("File", ""),
+            "amount": float(row.get("BILLED", 0) or 0),
+            "days": int(days),
+        })
+
+with open(os.path.join(react_data_folder, "worklist.json"), "w") as f:
+    json.dump(worklist_rows, f, indent=4)
 
 # ---- FINALIZE ----
 with open(processed_log, "a") as log_file:
