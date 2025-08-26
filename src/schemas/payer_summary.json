@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "payer": {
+            "type": "string"
+          },
+          "clean_rate": {
+            "type": "number"
+          },
+          "top_denial": {
+            "type": "string"
+          },
+          "avg_dollars": {
+            "type": "number"
+          },
+          "delta": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "payer",
+          "clean_rate"
+        ]
+      }
+    }
+  },
+  "required": [
+    "rows"
+  ]
+}

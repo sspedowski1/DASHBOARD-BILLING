@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "claim_stub_id": {
+        "type": "string"
+      },
+      "risk": {
+        "type": "number"
+      },
+      "top_factors": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "claim_stub_id",
+      "risk",
+      "top_factors"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "V001",
+    "patient_id": "P001",
+    "dos": "2025-08-26",
+    "visit_type": "OV",
+    "mdm_level": "moderate",
+    "time_minutes": 30,
+    "procedures": [
+      "cryotherapy"
+    ],
+    "complaints": [
+      "depression screen"
+    ],
+    "assessment_free_text": "CKD stage 3a; PHQ-9 completed",
+    "icd_candidates": [
+      "Z13.31"
+    ],
+    "history": {
+      "recent_cpts": [
+        {
+          "code": "G0439",
+          "dos": "2024-08-20"
+        }
+      ]
+    },
+    "previous_cpt_lookback_days": 365
+  },
+  {
+    "id": "V002",
+    "patient_id": "P002",
+    "dos": "2025-08-20",
+    "visit_type": "Preventive",
+    "time_minutes": 25,
+    "complaints": [
+      "annual wellness"
+    ],
+    "assessment_free_text": "No abnormal findings",
+    "icd_candidates": [],
+    "history": {
+      "recent_cpts": [
+        {
+          "code": "G0439",
+          "dos": "2025-02-14"
+        }
+      ]
+    },
+    "previous_cpt_lookback_days": 365
+  },
+  {
+    "id": "V003",
+    "patient_id": "P003",
+    "dos": "2025-08-18",
+    "visit_type": "OV",
+    "mdm_level": "low",
+    "time_minutes": 18,
+    "complaints": [
+      "knee pain"
+    ],
+    "assessment_free_text": "Advance care planning discussed for 10 minutes",
+    "icd_candidates": [
+      "M25.561"
+    ]
+  }
+]

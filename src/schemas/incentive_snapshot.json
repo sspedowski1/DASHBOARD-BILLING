@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "total_paid": {
+      "type": "number"
+    },
+    "by_program": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "name",
+          "amount"
+        ]
+      }
+    },
+    "by_provider": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "npi": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "npi",
+          "amount"
+        ]
+      }
+    }
+  },
+  "required": [
+    "total_paid"
+  ]
+}

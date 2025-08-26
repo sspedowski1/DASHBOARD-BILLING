@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "payments_ytd": {
+      "type": "number"
+    },
+    "denial_rate": {
+      "type": "number"
+    },
+    "days_to_pay": {
+      "type": "number"
+    },
+    "write_offs": {
+      "type": "number"
+    },
+    "clean_rate": {
+      "type": "number"
+    },
+    "incentives_ytd": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "payments_ytd",
+    "denial_rate",
+    "days_to_pay",
+    "clean_rate"
+  ]
+}
