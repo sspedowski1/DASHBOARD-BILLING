@@ -28,4 +28,4 @@ def ensure_incentive_snapshot(incentive_source_path:str, out_path:str):
         json.dump(data, f, indent=2)
 
 if __name__ == "__main__":
-    ensure_incentive_snapshot(r"C:\Users\ma\Documents\2025 INCENTIVE\output.json", "./output/incentive_snapshot.json")
+    ensure_incentive_snapshot("../2025-INCENTIVE/output/incentive_snapshot.json", "./output/incentive_snapshot.json")

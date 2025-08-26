@@ -62,7 +62,7 @@ def gen_payer_and_denials():
             json.dump(mock_denials, f, indent=2)
 
 def gen_incentives():
-    ensure_incentive_snapshot(r"C:\Users\ma\Documents\2025 INCENTIVE\output.json", os.path.join(OUT,"incentive_snapshot.json"))
+    ensure_incentive_snapshot("../2025-INCENTIVE/output/incentive_snapshot.json", os.path.join(OUT,"incentive_snapshot.json"))
 
 def main():
     gen_kpis()
