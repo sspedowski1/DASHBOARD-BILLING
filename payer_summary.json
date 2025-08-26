@@ -1,0 +1,7 @@
+[
+  {"name": "BCBS", "amount": 45000},
+  {"name": "Humana", "amount": 32000},
+  {"name": "UHC", "amount": 28500},
+  {"name": "Priority Health", "amount": 22000},
+  {"name": "BCN", "amount": 14850}
+]

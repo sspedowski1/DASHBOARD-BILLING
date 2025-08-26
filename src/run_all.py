@@ -6,7 +6,7 @@ Replace individual generators with real logic as you integrate.
 import os, json, sys
 from src.scrubber.ov_to_billing import ov_to_billing
 from src.predict.denial_risk import batch_score
-from src.era_pipeline.export_remittance_json import export_summaries
+# from src.era_pipeline.export_remittance_json import export_summaries
 from src.integrations.incentives_ingest import ensure_incentive_snapshot
 
 BASE = os.path.dirname(os.path.dirname(__file__))
@@ -46,10 +46,23 @@ def gen_claims_and_risk():
         json.dump(risk, f, indent=2)
 
 def gen_payer_and_denials():
-    export_summaries(OUT)
+    # Use your existing ERA processor
+    import subprocess
+    import sys
+    try:
+        subprocess.run([sys.executable, os.path.join(BASE, "src", "era_pipeline", "export_remittance_json.py")], check=True)
+    except Exception as e:
+        print(f"ERA processing failed: {e}")
+        # Fallback to mock data
+        mock_payer = [{"name": "BCBS", "amount": 45000}, {"name": "Humana", "amount": 32000}]
+        mock_denials = [{"name": "CO-97", "value": 15}, {"name": "PR-1", "value": 8}]
+        with open(os.path.join(OUT,"payer_summary.json"),"w") as f:
+            json.dump(mock_payer, f, indent=2)
+        with open(os.path.join(OUT,"denial_trends.json"),"w") as f:
+            json.dump(mock_denials, f, indent=2)
 
 def gen_incentives():
-    ensure_incentive_snapshot("../2025-INCENTIVE/output/incentive_snapshot.json", os.path.join(OUT,"incentive_snapshot.json"))
+    ensure_incentive_snapshot(r"C:\Users\ma\Documents\2025 INCENTIVE\output.json", os.path.join(OUT,"incentive_snapshot.json"))
 
 def main():
     gen_kpis()

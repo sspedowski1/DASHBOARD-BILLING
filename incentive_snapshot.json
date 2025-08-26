@@ -1,0 +1,12 @@
+{
+  "total_paid": 22500,
+  "by_program": [
+    {"name": "MA HCC gap closures", "amount": 14200},
+    {"name": "Quality Gap Closures", "amount": 6800},
+    {"name": "Chronic Care Mgmt Bonus", "amount": 1500}
+  ],
+  "by_provider": [
+    {"npi": "1234567890", "amount": 12000},
+    {"npi": "0987654321", "amount": 10500}
+  ]
+}
